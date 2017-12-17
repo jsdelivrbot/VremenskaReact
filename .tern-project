@@ -1,0 +1,14 @@
+{
+    "plugins": {
+        "es_modules": {},
+        "doc_comment": {},
+        "webpack": {}
+    },
+    "libs": [
+        "browser",
+        "ecmascript",
+        "react",
+        "underscore"
+    ],
+    "ecmaVersion": 6
+}
