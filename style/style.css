@@ -1,0 +1,18 @@
+.searchbar {
+    margin: 20px;
+    text-align: center;
+}
+
+.searchbar input {
+    width: 55%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.forecast-item {
+  display: block;
+  margin: auto;
+  padding-top: 35px;
+  min-height: 130px;
+  min-width: 100px;
+}
