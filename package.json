@@ -27,11 +27,18 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.6",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
-    "redux": "^3.0.4"
+    "react-weathericons": "^1.0.4",
+    "redux": "^3.0.4",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "weathericons": "^2.1.0",
+    "yahoo-weather": "^2.2.2"
   }
 }
