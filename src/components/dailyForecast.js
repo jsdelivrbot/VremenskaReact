@@ -2,7 +2,7 @@ import React from "react";
 import WeatherIcons from "react-weathericons";
 import css from "weathericons/css/weather-icons.min.css";
 
-const dani = {
+const days = {
   Mon: "Ponedjeljak",
   Tue: "Utorak",
   Wed: "Srijeda",
@@ -12,7 +12,7 @@ const dani = {
   Sun: "Nedjelja"
 };
 
-const mjeseci = {
+const months = {
   Jan: "Januar",
   Feb: "Februar",
   Mar: "Mart",
@@ -27,14 +27,14 @@ const mjeseci = {
   Dec: "Decembar"
 };
 
-const obradiDatum = string => {
-  const datumRegex = /(\d+) (\w{3}) (\d{4})/g;
-  const rez = datumRegex.exec(string);
-  const dan = rez[1];
-  const mj = mjeseci[rez[2]];
-  const god = rez[3];
+const formatDate = string => {
+  const dateRegex = /(\d+) (\w{3}) (\d{4})/g;
+  const result = dateRegex.exec(string);
+  const day = result[1];
+  const month = months[result[2]];
+  const year = result[3];
 
-  return `${dan}. ${mj} ${god}.`;
+  return `${day}. ${month} ${year}.`;
 };
 
 const DailyForecast = ({ forecast }) => {
@@ -46,8 +46,8 @@ const DailyForecast = ({ forecast }) => {
           size="4x"
         />
       </div>
-      <h3>{dani[forecast.day]}</h3>
-      <h4>{obradiDatum(forecast.date)}</h4>
+      <h3>{days[forecast.day]}</h3>
+      <h4>{formatDate(forecast.date)}</h4>
       <strong>Maksimalna dnevna: </strong> {forecast.high}°C <br />
       <strong>Minimalna dnevna: </strong> {forecast.low}°C <br />
     </div>
