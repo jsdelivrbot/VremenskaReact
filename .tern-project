@@ -1,14 +1,25 @@
 {
-    "plugins": {
-        "es_modules": {},
-        "doc_comment": {},
-        "webpack": {}
-    },
-    "libs": [
-        "browser",
-        "ecmascript",
-        "react",
-        "underscore"
-    ],
-    "ecmaVersion": 6
+  "plugins": {
+    "es_modules": {},
+    "doc_comment": {},
+    "webpack": {},
+    "node": {},
+    "modules": {
+      "dontLoad": "",
+      "load": "",
+      "modules": ""
+    }
+  },
+  "libs": [
+    "browser",
+    "ecmascript",
+    "underscore"
+  ],
+  "ecmaVersion": 6,
+  "loadEagerly": [
+    "src/**/*.js"
+  ],
+  "dontLoad": [
+    "node_modules/**"
+  ]
 }
